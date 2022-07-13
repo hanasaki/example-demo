@@ -1,0 +1,10 @@
+# deb https://repos.influxdata.com/ubuntu bionic stable
+# https://www.hackerxone.com/2021/08/18/influxdb-setup-on-ubuntu-20-04/
+#
+# deb https://repos.influxdata.com/debian stable stable
+# deb https://repos.influxdata.com/debian testing stable
+# deb https://repos.influxdata.com/debian sid stable
+#
+deb https://repos.influxdata.com/debian bullseye stable
+#deb https://repos.influxdata.com/debian bookworm stable
+#deb https://repos.influxdata.com/debian trixie stable

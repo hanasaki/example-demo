@@ -1,0 +1,19 @@
+# https://lucanuscervus-notes.readthedocs.io/en/latest/HowTos/Install%20TICK%20on%20Debian%209%20(Stretch)/
+# Chromograf's webpage http://localhost:8006 
+# https://archive.docs.influxdata.com/chronograf/v1.4/introduction/getting-started/
+# 
+#    Telegraf: Time-Series Data Collector
+#    InfluxDB: Time-Series Data Storage written in Go.
+#    Chronograf: Time-Series Data Visualization
+#    Kapacitor: Time-Series Data Processing
+#
+# wget https://dl.influxdata.com/influxdb/releases/influxdb_1.4.3_amd64.deb
+# sudo dpkg -i influxdb_1.4.3_amd64.deb
+# sudo systemctl start influxdb
+# wget https://dl.influxdata.com/telegraf/releases/telegraf_1.5.2-1_amd64.deb
+# sudo dpkg -i telegraf_1.5.2-1_amd64.deb
+# wget https://dl.influxdata.com/chronograf/releases/chronograf_1.4.1.1_amd64.deb
+#sudo dpkg -i chronograf_1.4.1.1_amd64.deb
+# wget https://dl.influxdata.com/kapacitor/releases/kapacitor_1.4.0_amd64.deb
+# sudo dpkg -i kapacitor_1.4.0_amd64.deb
+# https://dl.influxdata.com/telegraf/releases
