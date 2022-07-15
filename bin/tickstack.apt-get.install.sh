@@ -1,1 +1,1 @@
-apt-get install -y influxdb2 telegraf chronograf kapacitor
+apt-get install -y influxdb telegraf chronograf kapacitor

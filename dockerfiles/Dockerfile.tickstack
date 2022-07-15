@@ -1,0 +1,22 @@
+# docker build -f dockerfiles/Dockerfile.tickstack -t hanaden/influxdb:latest .
+# docker run -it -p 8086:8086 --rm hanaden/influxdb:latest
+FROM debian:latest
+MAINTAINER Fred Bloom / hanasaki
+## baseline update the current system
+RUN mkdir -p ~root/bin && apt-get update && apt-get -y dist-upgrade
+## copy needs script into docker image
+COPY bin/* /tmp/
+RUN chmod u+x /tmp/*.sh
+## minimal extra debian installs
+RUN /tmp/debian.install.minimal.sh
+## udpate apt sources and rebaseline
+COPY etc/apt/ /etc/apt
+RUN /tmp/tickstack.debian.apt.sources.key.add.sh
+RUN apt-get update && apt-get -y dist-upgrade
+## install and run tickstack
+RUN /tmp/tickstack.apt-get.install.sh
+COPY bin/tickstack.daemons.run.sh /root/bin/
+RUN apt-get update && apt-get -y dist-upgrade
+ENTRYPOINT /bin/bash
+EXPOSE 8006/TCP
+#ENTRYPOINT ~root/bin/tickstack.daemons.run.sh
